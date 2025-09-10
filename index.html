@@ -54,7 +54,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    margin: 30px auto 60px auto;
+    margin: 30px auto 15px auto;
     max-width: 1120px;
   }
   .hero img {
@@ -81,6 +81,28 @@
     font-weight: 700;
     letter-spacing: 1.5px;
     box-shadow: 0 6px 20px rgba(128,0,32,0.9);
+  }
+  .down-order-btn {
+    display: block;
+    background-color: #d84350;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    max-width: 240px;
+    margin: 20px auto 50px auto;
+    padding: 14px 0;
+    border-radius: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 20px rgba(216, 67, 80, 0.8);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  .down-order-btn:hover {
+    background-color: #a52228;
+    box-shadow: 0 10px 26px rgba(165, 34, 40, 0.9);
   }
   .intro {
     max-width: 720px;
@@ -116,6 +138,8 @@
     box-shadow: 0 10px 26px rgb(176 58 78 / 0.18);
     overflow: hidden;
     transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
   }
   .product:hover {
     transform: translateY(-12px);
@@ -125,11 +149,15 @@
     width: 100%;
     height: 350px;
     object-fit: cover;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .product-info {
     padding: 22px 28px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .product-info h3 {
     margin: 0 0 12px 0;
@@ -141,9 +169,9 @@
     margin-bottom: 24px;
     font-size: 1.05rem;
     color: #a5292a;
+    flex-grow: 1;
   }
   button.shop-btn {
-    width: 100%;
     padding: 14px 0;
     background-color: #d84350;
     border: none;
@@ -153,6 +181,8 @@
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
   button.shop-btn:hover {
     background-color: #a52228;
@@ -187,6 +217,7 @@
     <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1470&q=80" alt="Fashion Hero" />
     <div class="hero-text">Your Style, Our Passion</div>
   </div>
+  <div class="down-order-btn" onclick="alert('Order process started!')">Down Order</div>
   <p class="intro">
     Discover the latest trends and timeless styles crafted exclusively for you. Explore our curated collections that define elegance and individuality.
   </p>
@@ -200,7 +231,7 @@
       <div class="product-info">
         <h3>Elegant Evening Dress</h3>
         <p>A sophisticated and stylish dress perfect for formal events and occasions.</p>
-        <button class="shop-btn" onclick="alert('Added Elegant Evening Dress to your cart!')">Add to Cart</button>
+        <button class="shop-btn" onclick="alert('Added Elegant Evening Dress to your cart!')">Shop Now</button>
       </div>
     </div>
     <div class="product">
@@ -208,7 +239,7 @@
       <div class="product-info">
         <h3>Casual Chic Outfit</h3>
         <p>Comfortable and trendy casual wear to keep you stylish every day.</p>
-        <button class="shop-btn" onclick="alert('Added Casual Chic Outfit to your cart!')">Add to Cart</button>
+        <button class="shop-btn" onclick="alert('Added Casual Chic Outfit to your cart!')">Shop Now</button>
       </div>
     </div>
     <div class="product">
@@ -216,7 +247,7 @@
       <div class="product-info">
         <h3>Street Style Jacket</h3>
         <p>Cool and edgy jacket that completes your urban fashion look.</p>
-        <button class="shop-btn" onclick="alert('Added Street Style Jacket to your cart!')">Add to Cart</button>
+        <button class="shop-btn" onclick="alert('Added Street Style Jacket to your cart!')">Shop Now</button>
       </div>
     </div>
     <div class="product">
@@ -224,7 +255,7 @@
       <div class="product-info">
         <h3>Summer Floral Dress</h3>
         <p>Light and breezy floral dress perfect for sunny summer outings.</p>
-        <button class="shop-btn" onclick="alert('Added Summer Floral Dress to your cart!')">Add to Cart</button>
+        <button class="shop-btn" onclick="alert('Added Summer Floral Dress to your cart!')">Shop Now</button>
       </div>
     </div>
   </div>

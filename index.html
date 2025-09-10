@@ -5,103 +5,129 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Fashion Website</title>
 <style>
-  /* CSS styles integrated */
   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #fefefe;
-    color: #333;
+    background-color: #f7f0f5; /* soft beige */
+    color: #333333;
   }
   header {
-    background-color: #222;
-    color: white;
-    padding: 15px 20px;
+    background-color: #5d244d; /* deep plum */
+    color: #f8d7e0; /* soft pink */
+    padding: 20px 20px;
     text-align: center;
   }
   nav {
     text-align: center;
-    background: #444;
+    background: #7a3e7c; /* medium plum */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   nav a {
-    color: white;
-    padding: 10px 15px;
-    margin: 0 5px;
+    color: #f8d7e0;
+    padding: 12px 18px;
+    margin: 0 8px;
     text-decoration: none;
     display: inline-block;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    border-radius: 4px;
   }
   nav a:hover {
-    background-color: #e91e63;
+    background-color: #d66ca1; /* brighter magenta/pink */
+    color: white;
   }
   .hero-image {
     width: 100%;
-    max-height: 400px;
+    max-height: 420px;
     object-fit: cover;
+    border-radius: 4px;
   }
   .container {
     max-width: 1100px;
-    margin: auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 0 20px 60px 20px;
   }
   h2 {
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 40px;
-    margin-bottom: 20px;
-    color: #e91e63;
+    margin-bottom: 30px;
+    color: #9c477d; /* muted plum */
   }
   .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px;
   }
   .product {
-    border: 1px solid #ddd;
-    margin: 10px;
-    flex-basis: 260px;
+    background: white;
     border-radius: 8px;
+    box-shadow: 0 6px 15px rgb(140 75 115 / 0.15);
+    flex-basis: 280px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.35s;
   }
   .product:hover {
-    transform: scale(1.05);
+    transform: translateY(-7px);
   }
   .product img {
     width: 100%;
-    height: 300px;
+    height: 320px;
     object-fit: cover;
   }
   .product-info {
-    padding: 15px;
+    padding: 20px;
   }
   .product-info h3 {
     margin-top: 0;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 700;
+    color: #5d244d;
+    font-size: 1.3rem;
   }
   .product-info p {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 1rem;
+    color: #62375b;
+    margin-bottom: 15px;
   }
   button.shop-btn {
-    background-color: #e91e63;
+    background-color: #d66ca1;
     border: none;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
   }
   button.shop-btn:hover {
-    background-color: #c2185b;
+    background-color: #b04b81;
+    box-shadow: 0 5px 15px rgba(182, 72, 128, 0.55);
   }
   footer {
-    margin-top: 40px;
-    background-color: #222;
-    color: white;
+    margin-top: 50px;
+    background-color: #5d244d;
+    color: #f8d7e0;
     text-align: center;
-    padding: 15px 20px;
+    padding: 20px;
+    font-weight: 600;
+  }
+  label {
+    font-weight: 600;
+    color: #5d244d;
+  }
+  input, textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #d66ca1;
+    box-shadow: 0 0 8px #d66ca1;
   }
 </style>
 </head>
@@ -135,7 +161,7 @@
   <h2>Our Collection</h2>
   <div class="products">
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/08/07/17/16/fashion-2608995_1280.jpg" alt="Elegant Evening Dress" />
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=800&q=80" alt="Elegant Evening Dress" />
       <div class="product-info">
         <h3>Elegant Evening Dress</h3>
         <p>Sophisticated and stylish dress perfect for any formal event.</p>
@@ -143,7 +169,7 @@
       </div>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/model-1284412_1280.jpg" alt="Casual Chic Outfit" />
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Casual Chic Outfit" />
       <div class="product-info">
         <h3>Casual Chic Outfit</h3>
         <p>Comfortable and trendy casual wear to keep you stylish everyday.</p>
@@ -151,16 +177,15 @@
       </div>
     </div>
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/08/06/14/55/street-style-2599773_1280.jpg" alt="Street Style Jacket" />
+      <img src="https://images.unsplash.com/photo-1514995669114-6a8257b6aeb3?auto=format&fit=crop&w=800&q=80" alt="Street Style Jacket" />
       <div class="product-info">
         <h3>Street Style Jacket</h3>
         <p>Cool and edgy jacket for your urban fashion look.</p>
         <button class="shop-btn" onclick="alert('Added Street Style Jacket to your cart!')">Add to Cart</button>
       </div>
     </div>
-    <!-- New image product added -->
     <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/03/27/13/38/fashion-2178586_1280.jpg" alt="Summer Floral Dress" />
+      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?auto=format&fit=crop&w=800&q=80" alt="Summer Floral Dress" />
       <div class="product-info">
         <h3>Summer Floral Dress</h3>
         <p>Light and breezy floral dress perfect for summer outings.</p>
@@ -174,17 +199,17 @@
   <h2>Contact Us</h2>
   <p style="max-width: 600px; margin: auto;">Have questions? Reach out to us via email or phone.</p>
   <form onsubmit="submitContact(event)" style="max-width: 500px; margin: auto;">
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 12px;">
       <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;" />
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;" />
     </div>
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 12px;">
       <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;" />
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;" />
     </div>
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 12px;">
       <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px;"></textarea>
+      <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px;"></textarea>
     </div>
     <button type="submit" class="shop-btn">Send</button>
   </form>
@@ -192,7 +217,7 @@
 
 <section id="about" class="container" style="display:none;">
   <h2>About Us</h2>
-  <p style="max-width: 700px; margin: auto; text-align:center;">
+  <p style="max-width: 700px; margin: auto; text-align:center; color: #5d244d;">
     Fashion Hub is a passionate team dedicated to bringing you the best in fashion trends, quality, and customer service. Our mission is to make fashion accessible to everyone.
   </p>
 </section>
@@ -202,7 +227,6 @@
 </footer>
 
 <script>
-  // JavaScript integrated for navigation and form
   function showSection(sectionId) {
     const sections = ['home', 'collection', 'contact', 'about'];
     sections.forEach(id => {
@@ -216,7 +240,6 @@
     event.target.reset();
   }
   
-  // Show home section initially
   showSection('home');
 </script>
 

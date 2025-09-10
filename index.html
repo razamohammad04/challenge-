@@ -15,15 +15,34 @@
   header {
     background-color: #6a0d1b; /* rich maroon */
     color: #fbe8e6;
-    padding: 32px 0;
-    text-align: center;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     letter-spacing: 2px;
     font-size: 2.75rem;
     font-weight: 900;
     box-shadow: 0 6px 12px rgba(106, 13, 27, 0.8);
   }
+  .header-title {
+    flex: 1;
+  }
+  .header-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .header-logos img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+  .header-logos img:hover {
+    filter: brightness(0) invert(0.6);
+  }
   nav {
-    background: #8b0f22; /* dark red */
+    background: #8b0f22;
     box-shadow: 0 4px 8px rgba(0,0,0,0.14);
   }
   nav ul {
@@ -49,7 +68,7 @@
   }
   nav ul li a:hover,
   nav ul li a.active {
-    background-color: #d44752; /* brighter red */
+    background-color: #d44752;
     box-shadow: 0 4px 14px rgba(212, 71, 82, 0.83);
   }
   .order-now-btn {
@@ -202,7 +221,14 @@
 </head>
 <body>
 
-<header>Fashion Hub</header>
+<header>
+  <div class="header-title">Fashion Hub</div>
+  <div class="header-logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Shutterstock_Logo.svg/120px-Shutterstock_Logo.svg.png" alt="Logo 1" title="Shutterstock" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Adobe_Photoshop_CC_icon.svg/120px-Adobe_Photoshop_CC_icon.svg.png" alt="Logo 2" title="Adobe Photoshop" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Instagram_logo_2016.svg/120px-Instagram_logo_2016.svg.png" alt="Logo 3" title="Instagram" />
+  </div>
+</header>
 
 <nav>
   <ul>

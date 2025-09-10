@@ -8,166 +8,174 @@
   body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #f7f0f5; /* soft beige */
-    color: #333333;
+    background-color: #fff7f8; /* very light pink-beige */
+    color: #4a1c24; /* dark maroon text */
   }
   header {
-    background-color: #5d244d; /* deep plum */
-    color: #f8d7e0; /* soft pink */
+    background-color: #800020; /* rich maroon */
+    color: #f9e6e7; /* pale pink text */
     padding: 20px 20px;
     text-align: center;
+    letter-spacing: 1.5px;
   }
   nav {
     text-align: center;
-    background: #7a3e7c; /* medium plum */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: #a52a2a; /* dark red */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.12);
   }
   nav a {
-    color: #f8d7e0;
-    padding: 12px 18px;
-    margin: 0 8px;
+    color: #f9e6e7;
+    padding: 12px 20px;
+    margin: 0 10px;
     text-decoration: none;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
-    transition: background-color 0.3s;
-    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
   }
   nav a:hover {
-    background-color: #d66ca1;
+    background-color: #d84350; /* bright red */
     color: white;
   }
   .hero-image {
     width: 100%;
-    max-height: 420px;
+    max-height: 440px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgb(131 40 46 / 0.4);
   }
   .container {
-    max-width: 1100px;
+    max-width: 1120px;
     margin: 30px auto;
-    padding: 0 20px 60px 20px;
+    padding: 0 24px 60px 24px;
   }
   h2 {
     text-align: center;
-    font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    color: #9c477d;
+    font-weight: 900;
+    margin-top: 44px;
+    margin-bottom: 36px;
+    color: #7a0a16; /* deep maroon */
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
   }
   /* Background pattern for dresses section */
   .dress-gallery-bg {
-    background-color: #f4e9f2;
-    background-image: radial-gradient(circle, #e1cbe9 10%, transparent 10%), radial-gradient(circle, #e1cbe9 10%, transparent 10%);
-    background-position: 0 0, 25px 25px;
-    background-size: 50px 50px;
-    padding: 30px 15px 50px 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgb(182 72 128 / 0.1);
+    background-color: #fce8eb; /* very light rose */
+    background-image:
+      repeating-radial-gradient(circle at 0 0, #f1cad6 1px, transparent 5px),
+      repeating-radial-gradient(circle at 30px 30px, #b03a4e 1px, transparent 8px);
+    padding: 38px 24px 62px 24px;
+    border-radius: 14px;
+    box-shadow: 0 6px 28px rgb(176 58 78 / 0.2);
   }
   .dress-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
-    gap: 20px;
-    max-width: 1100px;
-    margin: 30px auto 60px auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    max-width: 1120px;
+    margin: 0 auto;
   }
   .dress-item {
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgb(182 72 128 / 0.15);
+    box-shadow: 0 7px 22px rgb(176 58 78 / 0.18);
     background: white;
-    transition: transform 0.3s;
+    transition: transform 0.33s ease;
   }
   .dress-item:hover {
     transform: scale(1.07);
   }
   .dress-item img {
     width: 100%;
-    height: 260px;
+    height: 280px;
     object-fit: cover;
   }
   .dress-caption {
-    padding: 12px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #5d244d;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #800020;
     text-align: center;
+    letter-spacing: 1px;
   }
 
   .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 24px;
   }
   .product {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 6px 15px rgb(140 75 115 / 0.15);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgb(176 58 78 / 0.14);
     flex-basis: 280px;
     overflow: hidden;
-    transition: transform 0.35s;
+    transition: transform 0.38s ease;
   }
   .product:hover {
-    transform: translateY(-7px);
+    transform: translateY(-10px);
   }
   .product img {
     width: 100%;
-    height: 320px;
+    height: 340px;
     object-fit: cover;
   }
   .product-info {
-    padding: 20px;
+    padding: 24px;
   }
   .product-info h3 {
     margin-top: 0;
-    font-weight: 700;
-    color: #5d244d;
-    font-size: 1.3rem;
+    font-weight: 900;
+    color: #7a0a16;
+    font-size: 1.4rem;
+    text-transform: capitalize;
   }
   .product-info p {
-    font-size: 1rem;
-    color: #62375b;
-    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #9e353f;
+    margin-bottom: 22px;
   }
   button.shop-btn {
-    background-color: #d66ca1;
+    background-color: #d84350;
     border: none;
     color: white;
-    padding: 12px 20px;
+    padding: 14px 28px;
     cursor: pointer;
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 1.1rem;
     width: 100%;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.32s ease, box-shadow 0.32s ease;
   }
   button.shop-btn:hover {
-    background-color: #b04b81;
-    box-shadow: 0 5px 15px rgba(182, 72, 128, 0.55);
+    background-color: #a5272c;
+    box-shadow: 0 6px 16px rgba(165, 39, 44, 0.65);
   }
   footer {
-    margin-top: 50px;
-    background-color: #5d244d;
-    color: #f8d7e0;
+    margin-top: 60px;
+    background-color: #800020;
+    color: #f9e6e7;
     text-align: center;
-    padding: 20px;
-    font-weight: 600;
+    padding: 28px 24px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
   }
   label {
-    font-weight: 600;
-    color: #5d244d;
+    font-weight: 700;
+    color: #7a0a16;
   }
   input, textarea {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #c74e56;
+    border-radius: 7px;
     font-size: 1rem;
+    padding: 10px;
   }
   input:focus, textarea:focus {
     outline: none;
-    border-color: #d66ca1;
-    box-shadow: 0 0 8px #d66ca1;
+    border-color: #d84350;
+    box-shadow: 0 0 10px #d84350dd;
   }
 </style>
 </head>
@@ -187,7 +195,7 @@
 
 <section id="home" class="container">
   <img 
-    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1350&q=80" 
+    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1470&q=80" 
     alt="Fashion Hero" 
     class="hero-image" 
   />
@@ -199,30 +207,30 @@
 
 <!-- New dress gallery with background pattern -->
 <section class="dress-gallery-bg">
-  <h2 style="color: #5d244d;">Featured Dresses on Home</h2>
+  <h2>Featured Dresses on Home</h2>
   <div class="dress-gallery">
     <div class="dress-item">
-      <img src="https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=800&q=80" alt="Red Dress" />
+      <img src="https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=720&q=80" alt="Chic Red Dress" />
       <div class="dress-caption">Chic Red Dress</div>
     </div>
     <div class="dress-item">
-      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80" alt="Blue Evening Gown" />
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=720&q=80" alt="Elegant Blue Gown" />
       <div class="dress-caption">Elegant Blue Gown</div>
     </div>
     <div class="dress-item">
-      <img src="https://images.unsplash.com/photo-1520975911849-20fa155d6d3b?auto=format&fit=crop&w=800&q=80" alt="Summer Dress" />
+      <img src="https://images.unsplash.com/photo-1520975911849-20fa155d6d3b?auto=format&fit=crop&w=720&q=80" alt="Light Summer Dress" />
       <div class="dress-caption">Light Summer Dress</div>
     </div>
     <div class="dress-item">
-      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Classic Black Dress" />
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=720&q=80" alt="Classic Black Dress" />
       <div class="dress-caption">Classic Black Dress</div>
     </div>
     <div class="dress-item">
-      <img src="https://images.unsplash.com/photo-1542067309-68f37bff0eb5?auto=format&fit=crop&w=800&q=80" alt="Floral Dress" />
+      <img src="https://images.unsplash.com/photo-1542067309-68f37bff0eb5?auto=format&fit=crop&w=720&q=80" alt="Floral Spring Dress" />
       <div class="dress-caption">Floral Spring Dress</div>
     </div>
     <div class="dress-item">
-      <img src="https://images.unsplash.com/photo-1520975920497-4e43af656d8a?auto=format&fit=crop&w=800&q=80" alt="Casual Dress" />
+      <img src="https://images.unsplash.com/photo-1520975920497-4e43af656d8a?auto=format&fit=crop&w=720&q=80" alt="Casual Dress Look" />
       <div class="dress-caption">Casual Dress Look</div>
     </div>
   </div>
@@ -232,7 +240,7 @@
   <h2>Our Collection</h2>
   <div class="products">
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=800&q=80" alt="Elegant Evening Dress" />
+      <img src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=720&q=80" alt="Elegant Evening Dress" />
       <div class="product-info">
         <h3>Elegant Evening Dress</h3>
         <p>Sophisticated and stylish dress perfect for any formal event.</p>
@@ -240,7 +248,7 @@
       </div>
     </div>
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Casual Chic Outfit" />
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=720&q=80" alt="Casual Chic Outfit" />
       <div class="product-info">
         <h3>Casual Chic Outfit</h3>
         <p>Comfortable and trendy casual wear to keep you stylish everyday.</p>
@@ -248,7 +256,7 @@
       </div>
     </div>
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1514995669114-6a8257b6aeb3?auto=format&fit=crop&w=800&q=80" alt="Street Style Jacket" />
+      <img src="https://images.unsplash.com/photo-1514995669114-6a8257b6aeb3?auto=format&fit=crop&w=720&q=80" alt="Street Style Jacket" />
       <div class="product-info">
         <h3>Street Style Jacket</h3>
         <p>Cool and edgy jacket for your urban fashion look.</p>
@@ -256,7 +264,7 @@
       </div>
     </div>
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?auto=format&fit=crop&w=800&q=80" alt="Summer Floral Dress" />
+      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?auto=format&fit=crop&w=720&q=80" alt="Summer Floral Dress" />
       <div class="product-info">
         <h3>Summer Floral Dress</h3>
         <p>Light and breezy floral dress perfect for summer outings.</p>
@@ -269,18 +277,18 @@
 <section id="contact" class="container" style="display:none;">
   <h2>Contact Us</h2>
   <p style="max-width: 600px; margin: auto;">Have questions? Reach out to us via email or phone.</p>
-  <form onsubmit="submitContact(event)" style="max-width: 500px; margin: auto;">
-    <div style="margin-bottom: 12px;">
+  <form onsubmit="submitContact(event)" style="max-width: 520px; margin: auto;">
+    <div style="margin-bottom: 14px;">
       <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px;" />
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 12px;" />
     </div>
-    <div style="margin-bottom: 12px;">
+    <div style="margin-bottom: 14px;">
       <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px;" />
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 12px;" />
     </div>
-    <div style="margin-bottom: 12px;">
+    <div style="margin-bottom: 14px;">
       <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px;"></textarea>
+      <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 12px;"></textarea>
     </div>
     <button type="submit" class="shop-btn">Send</button>
   </form>
@@ -288,7 +296,7 @@
 
 <section id="about" class="container" style="display:none;">
   <h2>About Us</h2>
-  <p style="max-width: 700px; margin: auto; text-align:center; color: #5d244d;">
+  <p style="max-width: 740px; margin: auto; text-align:center; color: #7a0a16;">
     Fashion Hub is a passionate team dedicated to bringing you the best in fashion trends, quality, and customer service. Our mission is to make fashion accessible to everyone.
   </p>
 </section>

@@ -34,7 +34,7 @@
     border-radius: 4px;
   }
   nav a:hover {
-    background-color: #d66ca1; /* brighter magenta/pink */
+    background-color: #d66ca1;
     color: white;
   }
   .hero-image {
@@ -53,8 +53,48 @@
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 30px;
-    color: #9c477d; /* muted plum */
+    color: #9c477d;
   }
+  /* Background pattern for dresses section */
+  .dress-gallery-bg {
+    background-color: #f4e9f2;
+    background-image: radial-gradient(circle, #e1cbe9 10%, transparent 10%), radial-gradient(circle, #e1cbe9 10%, transparent 10%);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    padding: 30px 15px 50px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgb(182 72 128 / 0.1);
+  }
+  .dress-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto 60px auto;
+  }
+  .dress-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgb(182 72 128 / 0.15);
+    background: white;
+    transition: transform 0.3s;
+  }
+  .dress-item:hover {
+    transform: scale(1.07);
+  }
+  .dress-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+  .dress-caption {
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #5d244d;
+    text-align: center;
+  }
+
   .products {
     display: flex;
     flex-wrap: wrap;
@@ -155,6 +195,37 @@
   <p style="text-align:center; max-width: 700px; margin: auto;">
     Discover the latest trends and timeless styles crafted just for you. Shop exclusive collections designed for every occasion.
   </p>
+</section>
+
+<!-- New dress gallery with background pattern -->
+<section class="dress-gallery-bg">
+  <h2 style="color: #5d244d;">Featured Dresses on Home</h2>
+  <div class="dress-gallery">
+    <div class="dress-item">
+      <img src="https://images.unsplash.com/photo-1542068829-1115f7259450?auto=format&fit=crop&w=800&q=80" alt="Red Dress" />
+      <div class="dress-caption">Chic Red Dress</div>
+    </div>
+    <div class="dress-item">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80" alt="Blue Evening Gown" />
+      <div class="dress-caption">Elegant Blue Gown</div>
+    </div>
+    <div class="dress-item">
+      <img src="https://images.unsplash.com/photo-1520975911849-20fa155d6d3b?auto=format&fit=crop&w=800&q=80" alt="Summer Dress" />
+      <div class="dress-caption">Light Summer Dress</div>
+    </div>
+    <div class="dress-item">
+      <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Classic Black Dress" />
+      <div class="dress-caption">Classic Black Dress</div>
+    </div>
+    <div class="dress-item">
+      <img src="https://images.unsplash.com/photo-1542067309-68f37bff0eb5?auto=format&fit=crop&w=800&q=80" alt="Floral Dress" />
+      <div class="dress-caption">Floral Spring Dress</div>
+    </div>
+    <div class="dress-item">
+      <img src="https://images.unsplash.com/photo-1520975920497-4e43af656d8a?auto=format&fit=crop&w=800&q=80" alt="Casual Dress" />
+      <div class="dress-caption">Casual Dress Look</div>
+    </div>
+  </div>
 </section>
 
 <section id="collection" class="container" style="display:none;">

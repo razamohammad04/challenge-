@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fashion Website</title>
+<style>
+  /* CSS styles integrated */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #fefefe;
+    color: #333;
+  }
+  header {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  nav {
+    text-align: center;
+    background: #444;
+  }
+  nav a {
+    color: white;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+  }
+  nav a:hover {
+    background-color: #e91e63;
+  }
+  .hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #e91e63;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .product {
+    border: 1px solid #ddd;
+    margin: 10px;
+    flex-basis: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s;
+  }
+  .product:hover {
+    transform: scale(1.05);
+  }
+  .product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 15px;
+  }
+  .product-info h3 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .product-info p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  button.shop-btn {
+    background-color: #e91e63;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  button.shop-btn:hover {
+    background-color: #c2185b;
+  }
+  footer {
+    margin-top: 40px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fashion Hub</h1>
+  <p>Your Style, Our Passion</p>
+</header>
+
+<nav>
+  <a href="#home" onclick="showSection('home')">Home</a>
+  <a href="#collection" onclick="showSection('collection')">Collection</a>
+  <a href="#contact" onclick="showSection('contact')">Contact</a>
+  <a href="#about" onclick="showSection('about')">About Us</a>
+</nav>
+
+<section id="home" class="container">
+  <img 
+    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1350&q=80" 
+    alt="Fashion Hero" 
+    class="hero-image" 
+  />
+  <h2>Welcome to Fashion Hub</h2>
+  <p style="text-align:center; max-width: 700px; margin: auto;">
+    Discover the latest trends and timeless styles crafted just for you. Shop exclusive collections designed for every occasion.
+  </p>
+</section>
+
+<section id="collection" class="container" style="display:none;">
+  <h2>Our Collection</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2017/08/07/17/16/fashion-2608995_1280.jpg" alt="Dress" />
+      <div class="product-info">
+        <h3>Elegant Evening Dress</h3>
+        <p>Sophisticated and stylish dress perfect for any formal event.</p>
+        <button class="shop-btn" onclick="alert('Added Elegant Evening Dress to your cart!')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/model-1284412_1280.jpg" alt="Casual Wear" />
+      <div class="product-info">
+        <h3>Casual Chic Outfit</h3>
+        <p>Comfortable and trendy casual wear to keep you stylish everyday.</p>
+        <button class="shop-btn" onclick="alert('Added Casual Chic Outfit to your cart!')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/14/55/street-style-2599773_1280.jpg" alt="Street Style" />
+      <div class="product-info">
+        <h3>Street Style Jacket</h3>
+        <p>Cool and edgy jacket for your urban fashion look.</p>
+        <button class="shop-btn" onclick="alert('Added Street Style Jacket to your cart!')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container" style="display:none;">
+  <h2>Contact Us</h2>
+  <p style="max-width: 600px; margin: auto;">Have questions? Reach out to us via email or phone.</p>
+  <form onsubmit="submitContact(event)" style="max-width: 500px; margin: auto;">
+    <div style="margin-bottom: 10px;">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;" />
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;" />
+    </div>
+    <div style="margin-bottom: 10px;">
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px;"></textarea>
+    </div>
+    <button type="submit" class="shop-btn">Send</button>
+  </form>
+</section>
+
+<section id="about" class="container" style="display:none;">
+  <h2>About Us</h2>
+  <p style="max-width: 700px; margin: auto; text-align:center;">
+    Fashion Hub is a passionate team dedicated to bringing you the best in fashion trends, quality, and customer service. Our mission is to make fashion accessible to everyone.
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Fashion Hub. All rights reserved.
+</footer>
+
+<script>
+  // JavaScript integrated for navigation and form
+  function showSection(sectionId) {
+    const sections = ['home', 'collection', 'contact', 'about'];
+    sections.forEach(id => {
+      document.getElementById(id).style.display = id === sectionId ? 'block' : 'none';
+    });
+  }
+
+  function submitContact(event) {
+    event.preventDefault();
+    alert('Thank you for reaching out! We will get back to you soon.');
+    event.target.reset();
+  }
+  
+  // Show home section initially
+  showSection('home');
+</script>
+
+</body>
+</html>

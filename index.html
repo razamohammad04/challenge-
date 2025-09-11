@@ -216,14 +216,38 @@
     letter-spacing: 1.9px;
     font-size: 1.05rem;
   }
+  /* Face detection feature styles */
+  #face-detection-feature {
+    max-width: 440px;
+    margin: 50px auto 80px auto;
+    background: #fff5f6;
+    border-radius: 18px;
+    padding: 34px 24px 28px 24px;
+    box-shadow: 0 10px 32px rgba(218, 74, 86, 0.13);
+    text-align: center;
+    border: 1.5px solid #d44752;
+  }
+  #face-detection-feature h3 {
+    margin-bottom: 16px;
+    font-size: 1.28rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  #facePhotoInput {
+    margin-bottom: 10px;
+  }
+  #suggestedDress {
+    margin-top: 24px;
+    font-size: 1.18rem;
+    color: #a82b33;
+    font-weight: 700;
+  }
 </style>
 </head>
 <body>
-
 <header>
   <div class="header-title">Fashion Hub</div>
 </header>
-
 <nav>
   <ul>
     <li><a href="#home" class="active" onclick="showSection('home')">Home</a></li>
@@ -232,9 +256,7 @@
     <li><a href="#about" onclick="showSection('about')">About Us</a></li>
   </ul>
 </nav>
-
 <div class="order-now-btn" onclick="alert('Order Now process started!')">Order Now</div>
-
 <section id="home" class="container">
   <div class="hero">
     <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1470&q=80" alt="Fashion Hero" />
@@ -243,8 +265,15 @@
   <p class="intro">
     Discover the latest trends and timeless styles crafted exclusively for you. Explore our curated collections that define elegance and individuality.
   </p>
+  <!-- Face detection feature -->
+  <div id="face-detection-feature">
+    <h3>Find Your Suitable Dress</h3>
+    <input type="file" id="facePhotoInput" accept="image/*" />
+    <img id="facePhotoPreview" style="width:200px; display:none; margin-top:18px; border-radius:14px;" />
+    <button id="detectFaceBtn" class="shop-btn" style="margin-top:16px;">Detect Face and Suggest Dress</button>
+    <div id="suggestedDress"></div>
+  </div>
 </section>
-
 <section id="collection" class="new-arrivals" style="display:none;">
   <h2>New Arrivals</h2>
   <div class="products">
@@ -314,7 +343,6 @@
     </div>
   </div>
 </section>
-
 <section id="contact" class="container" style="display:none; max-width: 620px; margin: 50px auto;">
   <h2 style="color:#6a0d1b; margin-bottom: 34px; font-weight: 900; letter-spacing: 1.9px; text-align: center;">Contact Us</h2>
   <form onsubmit="submitContact(event)">
@@ -327,18 +355,15 @@
     <button type="submit" class="shop-btn">Send</button>
   </form>
 </section>
-
 <section id="about" class="container" style="display:none; max-width: 740px; margin: 60px auto; text-align: center; color: #7a121d;">
   <h2 style="font-weight: 900; letter-spacing: 2.5px; margin-bottom: 32px;">About Us</h2>
   <p>
     At Fashion Hub, we blend timeless elegance with modern trends to craft styles that empower your individuality. Our passion for fashion drives us to deliver quality, comfort, and unmatched style for every occasion.
   </p>
 </section>
-
 <footer>
   &copy; 2025 Fashion Hub. All rights reserved.
 </footer>
-
 <script>
   function showSection(sectionId) {
     const sections = ['home', 'collection', 'contact', 'about'];
@@ -351,16 +376,43 @@
       link.classList.toggle('active', link.getAttribute('href') === '#' + sectionId);
     });
   }
-
   function submitContact(event) {
     event.preventDefault();
     alert('Thank you for reaching out! We will get back to you soon.');
     event.target.reset();
   }
-
   // Show home section by default on page load
   showSection('home');
-</script>
 
+  // --- Face Detection Feature JS ---
+  document.getElementById('facePhotoInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = document.getElementById('facePhotoPreview');
+        img.src = event.target.result;
+        img.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  document.getElementById('detectFaceBtn').addEventListener('click', function() {
+    /*
+      GOOGLE FACE DETECTION API INTEGRATION GOES HERE
+      - Use image from 'facePhotoPreview' as input
+      - After face detection and analysis, call your fashion recommendation function
+
+      Example output:
+      document.getElementById('suggestedDress').innerHTML =
+        "<b>Recommended Dress:</b> Elegant Evening Dress (Oval Face Shape)";
+
+      // You can replace this output after integrating Google's API and logic
+    */
+    document.getElementById('suggestedDress').innerHTML = 
+      "<b>Recommended Dress:</b> [Your AI Result Here]";
+  });
+</script>
 </body>
 </html>
